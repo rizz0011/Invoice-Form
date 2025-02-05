@@ -16,7 +16,7 @@ const PDFUploadComponent = ({ setFile, fileName, setFileName }) => {
       setFile(savedPdf);
       setFileName(savedFileName);
     }
-  }, [setFile]);
+  }, [setFile, setFileName]);
 
   const onFileChange = (event) => {
     const uploadedFile = event.target.files[0];
