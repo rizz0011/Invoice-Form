@@ -16,7 +16,7 @@ const ProtectedRoute = ({ children }) => {
     if (!username) {
       navigate("/");
     }
-  }, []);
+  }, [username, navigate]);
   return username ? children : null;
 };
 

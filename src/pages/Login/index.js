@@ -11,7 +11,7 @@ const Login = () => {
     if (localStorage.getItem('username')) {
       navigate('/dashboard');
     }
-  }, []);
+  },[navigate])
 
   const formik = useFormik({
     initialValues: {
