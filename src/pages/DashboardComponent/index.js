@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import InvoiceForm from "../CreateInvoiceForm";
 import { Container, Button, Grid, Stack } from "@mui/material";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
@@ -8,13 +8,6 @@ export default function Dashboard() {
   const navigate = useNavigate();
 
   const [displayData, setDisplayData] = React.useState(false);
-
-  useEffect(() => {
-    const username = localStorage.getItem("username")
-    if (!username) {
-      navigate("/");
-    }
-  }, [navigate]); 
 
   const hanndleDisplayData = () => {
     setDisplayData(true);
