@@ -10,13 +10,14 @@ import Dashboard from "./pages/DashboardComponent";
 
 const ProtectedRoute = ({ children }) => {
   const navigate = useNavigate();
-  const username = localStorage.getItem("username");
+  const username = useMemo(() => localStorage.getItem("username"), []); 
 
   useEffect(() => {
     if (!username) {
       navigate("/");
     }
-  }, [username]);
+  }, [username, navigate]); 
+
   return username ? children : null;
 };
 
